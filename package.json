@@ -1,0 +1,39 @@
+{
+  "name": "mididorians",
+  "version": "1.0.0",
+  "description": "MIDI game",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "@stellarogs/tonejs-instruments": "^1.0.0",
+    "@tonaljs/tonal": "^4.6.0",
+    "abcjs": "^5.12.0",
+    "lodash": "^4.17.20",
+    "nprogress": "^0.2.0",
+    "tone": "^14.7.77",
+    "webmidi": "^2.5.1"
+  },
+  "browserslist": [
+    "since 2017-06"
+  ],
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "static",
+        "staticOutDir": "static/"
+      }
+    ]
+  }
+}

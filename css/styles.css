@@ -1,0 +1,323 @@
+
+html, body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+html {
+	background-color: rgb(240, 240, 240);
+}
+
+* {
+	font-family: 'Roboto', Calibri, Arial, sans-serif;
+	font-weight: 100;
+	font-size: 20px;
+	color: #34495e;
+
+}
+
+.hearts {
+
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.intervalsString {
+	font-size: 18px;
+	font-weight: 500;
+	padding: 5px;
+}
+
+.targetNoteName {
+	font-size: 28px;
+	margin-top: 10px;
+	color: #fff
+}
+
+.heart {
+	width: 75px;
+	height: 75px;
+	padding: 30px 10px;
+}
+
+.game {
+	display: none;
+}
+
+select {
+	background: #34495e;
+	margin: 20px;
+	padding: 10px;
+	vertical-align: middle;
+	color: #fff
+}
+
+option {
+	color: #fff
+}
+
+.started .game {
+	display: grid;
+}
+
+.started .intro {
+	display: none;
+}
+
+.intro {
+	display: grid;
+	height: 100%;
+	align-items: center;
+	justify-items: center;
+}
+
+.title {
+	color: #2980b9;
+	text-shadow: 0px 1px 3px currentColor;
+	font-size: 10vh;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+}
+
+.info {
+	color: #34495e;
+	font-size: 24px;
+}
+
+
+.contents {
+	text-align: center;
+	}
+
+.game {
+	height: 100%;
+}
+
+.start-game {
+
+	border: 1px solid currentColor;
+	font-size: 30px;
+	padding: 20px 50px;
+	background: transparent;
+	color: #27ae60;
+	font-weight: 100;
+	transition: background-color 0.2s ease-in-out;
+	box-shadow: 0 0 8px currentColor;	
+	border-radius: 30%;
+	margin-top: 100px;
+
+}
+.start-game:disabled {
+	color: #333;
+}
+
+.start-game:hover:not(:disabled) {
+	background-color: #27ae60;
+	cursor: pointer;
+	color: #ecf0f1;
+}
+
+.error {
+	border-radius: 25px;
+	color: #8e44ad;
+	font-weight: 800;
+	font-size: 40px;
+
+	padding: 0px 50px;
+}
+
+.errorInfo {
+	border-radius: 25px;
+	color: #2c3e50;
+	font-weight: 600;
+	font-size: 32px;
+
+	padding: 0px 50px;
+}
+
+.level .label {
+	justify-content: center;
+	font-size: 30px;
+	
+	color: #8e44ad;
+	display: flex;
+	position: relative;
+	right: -20px;
+	padding: 10px;
+	height: 40px;
+	width: 40px;
+}
+
+.level .value {
+	justify-content: center;
+	font-size: 30px;
+	background-color: #9b59b6;
+	color: white;
+	display: flex;
+	position: relative;
+	right: -20px;
+	padding: 10px;
+	height: 40px;
+	width: 40px;
+	border-radius: 100px;
+	border: 3px solid #8e44ad;
+	box-shadow: 0 0 5px currentColor;
+}
+
+.score .label {
+	justify-content: center;
+	font-size: 30px;
+	color: #d35400;
+	display: flex;
+	top: 0px;
+	position: absolute;
+	right: 20px;
+	padding: 10px;
+	width: 40px;
+}
+
+.score .value {
+	justify-content: center;
+	font-size: 30px;
+	color: white;
+	background-color: #f39c12;
+	display: flex;
+	top: 60px;
+	position: absolute;
+	right: 20px;
+	padding: 10px;
+	height: 40px;
+	width: 40px;
+	border-radius: 100px;
+	border: 3px solid #e67e22;
+}
+
+.currentChord {
+	color: #2c3e50;
+	font-weight: 400;
+	font-size: 84px;
+	font-family: sans-serif;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+.scaleModeInfo {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50px;
+	left: calc(50% - 200px);
+	text-align: center;
+	flex-direction: column;
+}
+
+.scaleModeInfoText {
+	padding: 20px 0;
+	font-size: 32px;
+}
+
+.targets {
+	position: absolute;
+}
+
+.target {
+	text-align: center;
+	background-color:rgb(240, 240, 240, 0.7);
+	font-family: monospace;
+	border-radius: 50%;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	position: absolute;
+	z-index:1000;
+	padding: 15px;
+}
+
+
+.targetScoreDiv {
+	width: calc(var(--numCols) * 30px + 150px) ;
+}
+
+.targetNotesPalette {
+	display: flex;
+	flex-direction: row;
+}
+
+.targetPaletteEl {
+	height: 50px;
+	width: 50px;
+}
+
+.notesPalette {
+	display: flex;
+	flex-direction: row;
+}
+
+.paletteEl {
+	height: 60px;
+	width: 60px;
+}
+
+.target__root {
+	font-size: 28px;
+	font-weight: 900;
+	color: var(--key-color);
+	font-family: sans-serif;	
+}
+
+.target__quality {
+	font-size: 20px;
+	font-weight: 900;
+	padding: 2px 5px;
+	color: var(--key-color);
+	font-weight: 500;
+	font-family: sans-serif;
+}	
+
+.piano {
+	display: flex;
+	align-self: end;
+	justify-self: end;
+}
+.piano__note {
+	background: #d2d2d2;
+    height: 320px;
+    width: 100px;
+		box-shadow: 0px 0px 6px rgb(36, 36, 36)
+	}
+
+.piano__note[data-note*="#"] {
+    height: 200px;
+	width: 43px;
+    background: #2c3e50;
+    left: -20px;
+    position: relative;
+    margin-right: -43px;
+	}
+
+	.piano__note.pressed {
+		background: var(--key-color);
+	}
+
+
+.musicScore {
+	position: absolute;
+	left: 0;
+	bottom: 100px;
+	text-align: center;
+}
+
+
+
+/* svg .abcjs-note {
+	fill: #34495e;
+	stroke: #2c3e50;
+} */
+
+
